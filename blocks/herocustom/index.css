@@ -1,0 +1,15 @@
+.herocustom-component {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.herocustom-image {
+    max-width: 100%;
+}
+
+.content {
+    background-color: #5A4BF0;
+    color: #fff;
+    padding: 20px;
+}

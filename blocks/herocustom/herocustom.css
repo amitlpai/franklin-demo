@@ -1,0 +1,34 @@
+ .herocustom-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+
+.herocustom-text {
+  max-width: 50%;
+}
+
+.herocustom-text h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.herocustom-text p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.herocustom-text .button {
+  margin-right: 10px;
+  padding: 10px 20px;
+  background-color: #0073e6;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.herocustom-text .button:hover {
+  background-color: #005bb5;
+}
