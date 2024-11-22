@@ -1,27 +1,119 @@
-.abrysvocards > ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(257px, 1fr));
-  grid-gap: 24px;
+.abrysvocards-wrapper {
+  background-color: var(--ocean-dark);
+
+  --text-color: var(--text-color);
+  --heading-color: var(--dark-color);
+
+  margin: 0 !important;
+  padding: 48px;
 }
 
-.abrysvocards > ul > li {
-  border: 1px solid #dadada;
-  background-color: var(--background-color);
+.abrysvocards.block {
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-horizontal);
+  filter: drop-shadow(0 4px 4px rgb(0 0 0 / 25%));
 }
 
-.abrysvocards .abrysvocards-card-body {
-  margin: 16px;
+/* Invidual cards */
+.abrysvocards.block > div {
+  background-color: var(--color-white);
+  border-radius: var(--border-radius);
+  padding: 32px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: var(--spacing-50);
 }
 
-.abrysvocards .abrysvocards-card-image {
-  line-height: 0;
+/* Card content box; the other div is wrapping the heading */
+.abrysvocards.block > div > div:last-of-type {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-grow: 1;
 }
 
-.abrysvocards > ul > li img {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
+/* Add gap between text content and button */
+.abrysvocards.block > div > div:last-of-type > p:first-of-type {
+  margin-bottom: 2rem;
+}
+
+.abrysvocards.block h2,
+.abrysvocards.block h3 {
+  color: var(--steel-blue-dark);
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.abrysvocards.block p {
+  color: var(--gray-60);
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.abrysvocards.block p.button-container a {
+  color: var(--gray-60);
+  font-size: 16px;
+  font-weight: 700;
+  padding: 13px 24px;
+  min-width: 230px;
+  margin-bottom: 1.5rem;
+}
+
+.abrysvocards.block p.button-container {
+  margin-top: auto;
+}
+
+.abrysvocards.block img {
+  border-radius: var(--border-radius);
+  min-width: 239px;
+  aspect-ratio: 16 / 9;
+}
+
+.abrysvocards.block div div p picture {
+  position: relative;
+}
+
+.abrysvocards.block div div p picture::after {
+  content: 'Actor Portrayal';
+  position: absolute;
+  bottom: 18px;
+  left: 12px;
+  background-color: #fffc;
+  color: #000;
+  padding: 3px 6px;
+  font-size: 12px;
+}
+
+@media screen and (max-width: 768px) {
+  .abrysvocards-wrapper {
+    padding: 32px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .abrysvocards.block {
+    flex-flow: column nowrap;
+    gap: 2rem;
+  }
+
+  .abrysvocards.block > div {
+    padding: 24px 20px;
+  }
+
+  .abrysvocards.block p.button-container {
+    width: 100%;
+  }
+
+  .abrysvocards.block h2,
+  .abrysvocards.block h3 {
+    font-size: 24px;
+  }
+
+  .abrysvocards.block p {
+    font-size: 18px;
+  }
 }
