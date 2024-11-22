@@ -1,28 +1,34 @@
-.columns-2-cols {
+.nurteccolumns > div {
   display: flex;
-  gap: 20px;
+  flex-direction: column;
 }
 
-.nurteccolumn {
-  flex: 1;
-  padding: 15px;
-  background-color: #f0f0f0;
-  border-radius: 8px;
+.nurteccolumns img {
+  width: 100%;
 }
 
-.nurteccolumn h2 {
-  font-size: 20px;
-  color: #333;
-  margin-bottom: 10px;
+.nurteccolumns > div > div {
+  order: 1;
 }
 
-.nurteccolumn p {
-  font-size: 16px;
-  color: #555;
+.nurteccolumns > div > .columns-img-col {
+  order: 0;
 }
 
-.migraine-treatment h1 {
-  font-size: 24px;
-  color: #4a2c82;
-  margin-bottom: 20px;
+.nurteccolumns > div > .columns-img-col img {
+  display: block;
+}
+
+@media (width >= 900px) {
+  .nurteccolumns > div {
+    align-items: center;
+    flex-direction: unset;
+    gap: 24px;
+    
+  }
+
+  .columns > div > div {
+    flex: 1;
+    order: unset;
+  }
 }
