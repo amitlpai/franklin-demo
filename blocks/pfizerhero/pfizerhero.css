@@ -1,0 +1,53 @@
+.pfizerhero-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+  }
+  
+  .pfizerhero-image {
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  .pfizerhero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .pfizerhero-text {
+    flex: 2;
+  }
+  
+  .pfizerhero-text h1 {
+    font-size: large;
+  }
+
+  .pfizerhero-text h2 {
+    margin: 0;
+    color: #333;
+    font-size: medium;
+  }
+  
+  .pfizerhero-text p {
+    color: #666;
+    font-size: small;
+    
+  }
+  
+  .pfizerhero-text a.button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+  }
+  
+  .pfizerhero-text a.button:hover {
+    background-color: #0056b3;
+  }
+  
