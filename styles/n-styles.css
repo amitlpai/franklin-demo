@@ -1,0 +1,1477 @@
+/*
+ * Copyright 2020 Adobe. All rights reserved.
+ * This file is licensed to you under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License. You may obtain a copy
+ * of the License at http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ * OF ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ */
+
+ :root {
+  /* brand color tokens */
+  --pfizer-blue: #0000c9;
+  --pfizer-sky: #3d96f7;
+  --pfizer-sky-light: #cfe8ff;
+  --pfizer-light: #ecf5fe;
+  --nurtec-purple: #624B78;
+  --nurtec-purple-light: #BBB1C5;
+  --nurtec-purple-lighter: #E7E3EB;
+  --nurtec-purple-transparent: #634C7933;
+  --nurtec-blue-transparent: #00B5C733;
+  --nurtec-teal: #00838F;
+  --nurtec-teal-light: #C8E9EC;
+  --nurtec-teal-lighter: #E6F8F9;
+  --nurtec-teal-transparent: #00838Fc0;
+  --nurtec-seafoam: #71B790;
+  --nurtec-seafoam-light: #E3F3E9;
+  --nurtec-seafoam-lighter: #F1F9F4;
+  --nurtec-orange: #F2C94C;
+  --nurtec-orange-light: #F8E4A5;
+  --brand-primary: var(--nurtec-purple);
+  --brand-secondary: var(--nurtec-teal);
+  --brand-tertiary: var(--nurtec-teal-light);
+  --nurtec-dark-sky: #00707B;
+  --accent-light-color: #E6F8F9;
+
+  /* design color tokens */
+  --error-red: #e90649;
+  --gray-05: #f5f5f5;
+  --gray-10: #e5e5e5;
+  --gray-20: #b9bcbe;
+  --gray-50: #707780;
+  --gray-60: #5b5958;
+  --gray-70: #404040;
+  --dark-color: var(--brand-primary);
+  --emphasis-color: var(--brand-secondary);
+  --accent-color: var(--brand-tertiary);
+  --light-color: var(--nurtec-purple-lighter);
+
+  /* color variables */
+  --border-color: var(--gray-60);
+  --background-color: white;
+  --text-color: black;
+  --heading-color: var(--brand-primary);
+  --heading-emphasis-color: var(--emphasis-color);
+  --eyebrow-color: inherit;
+  --footnote-color: var(--gray-70);
+  --link-color: var(--brand-primary);
+  --button-border-color: var(--link-color);
+  --button-background-color: transparent;
+  --button-text-color: var(--button-border-color);
+  --boxshadow-savinghero-color: #00000040;
+  --white-color: #fff;
+  
+  /* border widths */
+  --border-10: 1px;
+  --border-20: 2px;
+  --border-40: 4px;
+  --border-80: 8px;
+
+  /* border-radius */
+  --border-radius: 1rem;
+  --border-radius-max: 1.23rem;
+
+  /* spacing units */
+  --spacing-10: .25rem;
+  --spacing-20: .5rem;
+  --spacing-30: 1rem;
+  --spacing-40: 1.5rem;
+  --spacing-50: 2rem;
+  --spacing-57: 2.7rem;
+  --spacing-55: 3.5rem;
+  --spacing-60: 4rem;
+  --spacing-70: 5rem;
+  --spacing-80: 6rem;
+  --spacing-90: 7rem;
+  --spacing-95: 8rem;
+  --spacing-100: 12rem;
+
+  /* spacing variables */
+  --spacing-vertical: var(--spacing-55);
+  --spacing-horizontal: var(--spacing-40);
+  --gutter-horizontal: var(--spacing-horizontal);
+
+  /* font faces */
+  --body-font-family: 'Pfizer Diatype', 'Pfizer Diatype-fallback', sans-serif;
+  --heading-font-family: 'Pfizer Tomorrow', 'Pfizer Tomorrow-fallback', sans-serif;
+  --fixed-font-family: monospace;
+
+  /* body sizes */
+  --body-font-size-xxl: 1.5rem;
+  --body-font-size-xl: 1.25rem;
+  --body-font-size-l: var(--body-font-size-xl);
+  --body-font-size-m: 16px;
+  --body-font-size-sm: 14px;
+  --body-font-size-s: 12px;
+  --body-font-size-xs: .675rem;
+  --body-font-size-xxs: .5rem;
+
+  /* footnote sizes */
+  --footnote-font-size-ml: 10px;
+  --footnote-font-size-s: 12px;
+  --footnote-font-size-m: 14px;
+  --footnote-font-size-sm: 15px;
+  --footnote-font-size-l: 16px;
+  --footnote-font-size-lm: 20px;
+  --footnote-font-size-lmm: 30px;
+
+  /* heading sizes */
+  --heading-font-size-exl: 64px;
+  --heading-font-size-xxxl: 24px;
+  --heading-font-size-xxmll: 28px;
+  --heading-font-size-xxl: 30px;
+  --heading-font-size-xxll: 33px;
+  --heading-font-size-xxml: 36px;
+  --heading-font-size-xxxll: 40px;
+  --heading-font-size-xll: 48px;
+  --heading-font-size-xl: var(--heading-font-size-xxl);
+  --heading-font-size-l: 20px;
+  --heading-font-size-m: var(--heading-font-size-l);
+  --heading-font-size-s: var(--body-font-size-m);
+  --heading-font-size-xs: var(--heading-font-size-s);
+
+  /* nav  */
+  --nav-height: 128px;
+
+  /* content */
+  --content-width: 1154px;
+  --site-width: 100vw;
+}
+
+/* tablet size */
+@media (min-width: 700px) {
+  :root {   
+    /* spacing variables */
+    --spacing-horizontal: 28px;
+
+    /* heading sizes */
+    --heading-font-size-xxl: 36px;
+    --heading-font-size-l: 24px;
+
+    /* nav */
+    --nav-height: 124px;
+
+    /* body sizes */
+    --body-font-size-ml: 16px;
+    --body-font-size-ss: 12px;
+  }
+}
+
+/* tablet with left-nav size */
+@media (min-width: 1100px) {
+  :root {
+    /* spacing */
+    --spacing-vertical: var(--spacing-50);
+    --gutter-horizontal: var(--spacing-60);
+
+    /* body sizes */
+    --body-font-size-m: 20px;
+    --body-font-size-s: 14px;
+
+    /* heading sizes */
+    --heading-font-size-xxl: 48px;
+    --heading-font-size-l: 30px;
+
+    /* nav */
+    --nav-height: 100vh;
+    --nav-width: 285px;
+
+    /* content */
+    --site-width: calc(var(--nav-width) + var(--content-width) + (2 * var(--spacing-horizontal)));
+  }
+}
+
+/* fallback fonts */
+@font-face {
+  font-weight: 400;
+  font-family: 'Pfizer Diatype-fallback';
+  size-adjust: 96.4%;
+  src: local('Arial');
+}
+
+@font-face {
+  font-weight: 800;
+  font-family: 'Pfizer Diatype-fallback';
+  size-adjust: 96.4%;
+  src: local('Arial Bold');
+}
+
+@font-face {
+  font-weight: 800;
+  font-family: 'Pfizer Tomorrow-fallback';
+  size-adjust: 92%;
+  src: local('Arial Bold');
+}
+
+html { /* turn off safari text size adjust */
+  /* stylelint-disable-next-line property-no-vendor-prefix */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  display: none;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size-m);
+  font-weight: normal;
+  line-height: 1.3;
+}
+
+body[data-nav-open=true],
+body[data-modal-open=true] {
+  overflow: hidden;
+}
+
+body.appear,
+body.sidekick-library.appear {
+  display: block;
+}
+
+@media (min-width: 1100px) {
+  body.appear {
+    display: grid;
+    grid-template:
+      'header announce' auto
+      'header main' 1fr
+      'header footer' auto / var(--nav-width) 1fr;
+    max-width: var(--site-width);
+    min-height: 100vh;
+    margin: auto;
+    border-left: var(--border-10) solid var(--gray-10);
+    border-right: var(--border-10) solid var(--gray-10);
+  }
+}
+
+aside.announcement {
+  grid-area: announce;
+  padding: var(--spacing-20);
+  background-color: var(--accent-color);
+  color: var(--gray-70);
+  font-size: var(--body-font-size-xs);
+  text-align: center;
+}
+
+@media (min-width: 700px) {
+  aside.announcement {
+    padding: var(--spacing-20) var(--gutter-horizontal);
+  }
+
+  .migraine-triggers-page .menstruation a.button:any-link {
+    font-size: 16px;
+  }
+}
+
+.pictogram .pictogram-body .button-container a.button {
+  font-size: 16px;
+}
+
+aside.announcement.split {
+  padding: var(--spacing-40) var(--gutter-horizontal);
+  text-align: left;
+}
+
+aside.announcement .button-container {
+  flex: 1 1 max-content;
+  width: 100%;
+}
+
+aside.announcement .button {
+  width: 100%;
+}
+
+aside.announcement a:any-link:not(.button) {
+  text-decoration: underline;
+}
+
+aside.announcement a:any-link:not(.button):hover {
+  text-decoration-thickness: var(--border-20);
+  text-underline-offset: var(--spacing-10);
+}
+
+aside.announcement > div > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0 var(--spacing-horizontal);
+}
+
+aside.announcement > div > div + div {
+  position: relative;
+  margin-top: var(--spacing-30);
+}
+
+aside.announcement > div > div + div::before {
+  content: '';
+  position: absolute;
+  width: calc(100% + (2 * var(--spacing-20)));
+  top: calc(var(--spacing-30) / -2);
+  border-top: var(--border-10) solid var(--dark-color);
+}
+
+@media (min-width: 700px) {
+  aside.announcement > div > div {
+    flex-direction: row;
+  }
+
+  aside.announcement .button-container {
+    flex: 1 1 320px;
+    margin: 0;
+  }
+
+  aside.announcement > div > div + div::before {
+    width: calc(100% + (2 * var(--gutter-horizontal)));
+  }
+}
+
+header {
+  grid-area: header;
+  height: var(--nav-height);
+}
+
+main {
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
+}
+
+h1, h2, h3,
+h4, h5, h6 {
+  margin: 0;
+  scroll-margin: calc(var(--nav-height) + var(--spacing-30));
+  color: var(--heading-color);
+  font-weight: bold;
+  line-height: 1.1;
+  word-break: break-word;
+}
+
+h1 strong, h2 strong, h3 strong,
+h4 strong, h5 strong, h6 strong {
+  color: var(--heading-emphasis-color);
+  font-weight: inherit;
+}
+
+h3 em {
+  color: var(--dark-color);
+  font-style: normal;
+}
+
+.dark h3 em {
+  color: var(--nurtec-purple-light);
+  font-style: normal;
+}
+
+h1 u, h2 u, h3 u,
+h4 u, h5 u, h6 u {
+  display: inline-block;
+  position: relative;
+  margin-top: var(--spacing-30);
+  font-family: var(--heading-font-family);
+  text-decoration: none;
+}
+
+h1 u::before, h2 u::before, h3 u::before,
+h4 u::before, h5 u::before, h6 u::before,
+.dual-line h2::before {
+  content: '';
+  position: absolute;
+  top: calc(-1 * var(--spacing-30));
+  height: var(--border-40);
+  border-left: 28px solid var(--nurtec-purple);
+  border-right: 28px solid var(--nurtec-teal);
+}
+
+h1 {
+  font-size: var(--heading-font-size-xxl);
+}
+
+.migraine-triggers-page .section:not(.hero-container) h1 {
+  font-family: var(--heading-font-family);
+  font-size: var(--heading-font-size-xxxll);
+  margin-bottom: 30px;
+}
+
+.migraine-triggers-page .section.weather-triggers {
+  padding: 40px 0;
+}
+
+h2 {
+  font-family: var(--heading-font-family);
+  font-size: var(--heading-font-size-xl);
+}
+
+h3 {
+  color: var(--text-color);
+  font-size: var(--heading-font-size-l);
+}
+
+.migraine-triggers-page h3 {
+  font-size: 26px;
+}
+
+h4 {
+  color: var(--text-color);
+  font-size: var(--heading-font-size-m);
+}
+
+h5 {
+  color: var(--text-color);
+  font-size: var(--heading-font-size-s);
+}
+
+h6 {
+  color: var(--text-color);
+  font-size: var(--heading-font-size-xs);
+}
+
+p, dl, ol, ul, pre, blockquote, figure {
+  margin: 0;
+}
+
+ol, ul {
+  padding-inline-start: 1.5rem;
+}
+
+h1 + *, h2 + *, h3 + *,
+h4 + *, h5 + *, h6 + *,
+* + p, p + *,
+* + ul, ul + *,
+.default-content-wrapper h1, 
+.default-content-wrapper h2, 
+.default-content-wrapper h3, 
+.default-content-wrapper h4, 
+.default-content-wrapper h5, 
+.default-content-wrapper h6, 
+.default-content-wrapper p, 
+.default-content-wrapper ol, 
+.default-content-wrapper ul {
+  margin-top: var(--spacing-30);
+}
+
+.default-content-wrapper h1, 
+.default-content-wrapper h2, 
+.default-content-wrapper h3, 
+.default-content-wrapper h4, 
+.default-content-wrapper h5, 
+.default-content-wrapper h6, 
+.default-content-wrapper p, 
+.default-content-wrapper ol, 
+.default-content-wrapper ul {
+  margin-bottom: var(--spacing-30);
+}
+
+.migraine-triggers-page .section.stress-triggers p,
+.migraine-triggers-page .section.travel-triggers p,
+.migraine-triggers-page .section.menstruation p,
+.migraine-triggers-page .travelstat li div:last-child {
+  font-size: 20px;
+}
+
+.migraine-triggers-page .section.stress-triggers h3,
+.migraine-triggers-page .section.travel-triggers h3,
+.migraine-triggers-page .section.menstruation h3 {
+  color: var(--nurtec-teal);
+  font-family: var(--heading-font-family);
+}
+
+h3#migraine-triggers {
+  margin-top: var(--spacing-55);
+}
+
+@media (min-width: 700px) {
+  .migraine-triggers-page .section.stress-triggers h1,
+  .migraine-triggers-page .section.travel-triggers h1,
+  .migraine-triggers-page .section.menstruation h1 {
+    font-size: 30px;
+  }
+
+  .migraine-triggers-page .section.stress-triggers h3,
+  .migraine-triggers-page .section.travel-triggers h3,
+  .migraine-triggers-page .section.menstruation h3 {
+    font-size: var(--heading-font-size-l);
+  }
+
+  .migraine-triggers-page .section.stress-triggers p,
+  .migraine-triggers-page .section.travel-triggers p,
+  .migraine-triggers-page .section.menstruation p {
+    font-size: var(--body-font-size-m);
+  }
+
+  h3#migraine-triggers {
+    margin-top: var(--spacing-70);
+  }
+}
+
+.modal .default-content-wrapper h1 u {
+  font-family: var(--body-font-family);
+}
+
+p.eyebrow {
+  line-height: 1.15;
+  color: var(--eyebrow-color)
+}
+
+p.eyebrow + * {
+  margin-top: var(--spacing-10);
+}
+
+.dual-line h2 {
+  position: relative;
+  margin-top: 50px;
+}
+
+.columns.cols-2 > div > div > h2:nth-child(1) {
+  margin-top: 0;
+}
+
+/* footnotes */
+p.footnote {
+  color: var(--footnote-color);
+  font-size: var(--footnote-font-size-m);
+  line-height: 1.2;
+}
+
+.getting-nurtec-page .pictogram-container p.footnote {
+  font-size: var(--footnote-font-size-s);
+}
+
+@media (min-width: 700px) {
+  p.footnote {
+    font-size: var(--footnote-font-size-l);
+  }
+
+  .getting-nurtec-page .pictogram-container p.footnote {
+    font-size: var(--footnote-font-size-m);
+  }
+}
+
+p.footnote sub {
+  font-size: inherit;
+  vertical-align: unset;
+}
+
+#control p.footnote sub {
+  font-size: var(--body-font-size-m);
+}
+
+p.footnote + p.footnote {
+  margin-top: var(--spacing-10);
+}
+
+code, samp, pre {
+  color: var(--gray-70);
+  font-family: var(--fixed-font-family);
+  font-size: var(--body-font-size-s);
+}
+
+code, samp {
+  padding: 0;
+}
+
+pre {
+  padding: var(--spacing-horizontal);
+  background-color: var(--gray-70);
+  color: white;
+  overflow: auto;
+  white-space: pre;
+}
+
+/* form elements */
+button {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  background-color: unset;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  cursor: pointer;
+}
+
+button:disabled, button:disabled:hover {
+  opacity: .8;
+  cursor: unset;
+}
+
+/* stylelint-disable no-descending-specificity */
+.button-container {
+  max-width: 100%;
+}
+
+.button-container.button-container-multi {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-20) var(--spacing-horizontal);
+}
+
+/* links */
+a:any-link {
+  color: inherit;
+  text-decoration: none;
+  word-break: break-word;
+  transition: color .2s;
+}
+
+a:hover {
+  color: var(--link-color);
+}
+
+a:hover,
+main a:any-link,
+dialog a:any-link {
+  text-decoration: underline;
+  text-decoration-thickness: var(--border-10);
+}
+
+a:hover,
+main a:any-link {
+  text-underline-offset: 2px;
+}
+
+dialog a:any-link,
+.section.accent.bg.anchor-offset a {
+  text-underline-offset: 4px;
+}
+
+dialog a:any-link:hover {
+  text-decoration: none;
+}
+
+main a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+a.button:any-link, button.button, form button {
+  box-sizing: border-box;
+  display: inline-block;
+  max-width: 100%;
+  margin: 0;
+  border: var(--border-20) solid var(--button-border-color);
+  border-radius: 100vw;
+  padding: var(--spacing-20) var(--spacing-30);
+  background-color: var(--button-background-color);
+  color: var(--button-text-color);
+  font-family: inherit;
+  font-size: inherit;
+  font-style: normal;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+  transition: border .2s, padding .2s, background-color .2s, color .2s;
+}
+
+.migraine-triggers-page .menstruation a.button:any-link {
+  font-size: 14px;
+}
+
+main a.button:any-link, main button.button, main form button {
+  width: 100%;
+  padding: 15px 24px;
+}
+
+@media (min-width: 368px) {
+  main a.button[href*='twitternew'],
+  main a.button[href*='instagram'],
+  main a.button[href*='facebook'] {
+    min-width: unset !important;
+  }
+}
+
+@media (min-width: 700px) {
+  main a.button:any-link, main button.button, main form button {
+    width: max-content;
+    min-width: 320px;
+  }
+}
+
+a.button:hover, button.button:hover, form button:hover {
+  --button-border-color: transparent;
+  --button-background-color: var(--link-color);
+  --button-text-color: white;
+}
+
+a.button.primary, button.button.primary, form button.primary {
+  --button-border-color: transparent;
+  --button-background-color: var(--link-color);
+  --button-text-color: white;
+}
+
+a.button.primary:hover, button.button.primary:hover, form button.primary:hover {
+  --button-border-color: var(--link-color);
+  --button-background-color: var(--background-color);
+  --button-text-color: var(--button-border-color);
+}
+
+a.button.secondary, button.button.secondary, form button.secondary {
+  width: max-content !important;
+  min-width: unset !important;
+  padding: 0 !important;
+  border: 0;
+  border-radius: 0;
+  line-height: 1.3;
+  text-decoration: underline;
+  text-decoration-thickness: var(--border-20);
+  text-underline-offset: var(--spacing-10);
+  text-align: inherit;
+}
+
+a.button.secondary:hover, button.button.secondary:hover, form button.secondary:hover {
+  --button-background-color: transparent !important;
+  --button-text-color: var(--text-color);
+}
+
+.section.accent.bg.anchor-bold a {
+  font-weight: bold;
+}
+
+@media (min-width: 1100px) {
+  aside.announcement a:any-link:not(.button):hover,
+  a:hover,
+  main a:any-link,
+  a.button.secondary, button.button.secondary, form button.secondary {
+    text-underline-offset: 4px;
+  }
+}
+
+/* stylelint-enable no-descending-specificity */
+
+iframe {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  border-radius: var(--border-radius);
+}
+
+hr {
+  margin: var(--spacing-vertical) 0;
+  border: 0;
+  border-bottom: var(--border-20) solid var(--dark-color);
+}
+
+img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+}
+
+span.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 1rem;
+  vertical-align: sub;
+}
+
+span.icon svg,
+span.icon img {
+  width: 100%;
+  height: 100%;
+  margin: 0 .6ch;
+  fill: currentcolor;
+}
+
+span.icon[data-position='first'] svg,
+span.icon[data-position='first'] img {
+  margin-left: 0;
+}
+
+span.icon[data-position='last'] svg,
+span.icon[data-position='last'] img {
+  margin-right: 0;
+}
+
+span.icon[data-position='only'] svg,
+span.icon[data-position='only'] img {
+  margin: 0;
+}
+
+/* modals */
+dialog.modal {
+  position: fixed;
+  overscroll-behavior: contain;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border: 0;
+  padding: 0;
+  z-index: 4;
+}
+
+dialog.modal .header-empty {
+  display: none;
+}
+
+dialog.modal .modal-header.hide {
+  padding: 0;
+}
+
+dialog.modal .modal-wrapper {
+  box-sizing: border-box;
+  position: fixed;
+  top: var(--spacing-vertical);
+  left: var(--gutter-horizontal);
+  bottom: var(--spacing-vertical);
+  right: var(--gutter-horizontal);
+  max-width: 768px;
+  height: max-content;
+  margin: 0 auto;
+  z-index: 4;
+}
+
+@media (min-width: 700px) {
+  dialog.modal .modal-wrapper {
+    left: var(--spacing-vertical);
+    right: var(--spacing-vertical);
+  }
+}
+
+dialog.modal .modal-content {
+  display: flex;
+  flex-direction: column;
+  height: max-content;
+  max-height: calc(100vh - (var(--spacing-vertical) * 3));
+}
+
+dialog.modal .modal-content > div {
+  background-color: var(--background-color);
+}
+
+dialog.modal .modal-content > div.light {
+  background-color: var(--light-color);
+}
+
+dialog.modal .modal-content > :first-child {
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+dialog.modal .modal-content > :last-child {
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
+}
+
+dialog.modal .section {
+  padding: var(--spacing-40) var(--spacing-horizontal);
+}
+
+dialog.modal .modal-header {
+  position: relative;
+}
+
+dialog.modal .modal-header h1 u,
+dialog.modal .modal-header h2 u,
+dialog.modal .modal-header h3 u {
+  --heading-color: var(--dark-color);
+
+  color: var(--heading-color);
+}
+
+dialog.modal .modal-header > div > :first-child {
+  padding-right: calc(20px + var(--spacing-horizontal));
+}
+
+dialog.modal .modal-header span.icon {
+  justify-content: unset;
+  width: 100%;
+  height: 64px;
+  margin-bottom: var(--spacing-30);
+}
+
+dialog.modal .modal-header svg {
+  width: auto;
+  max-width: 140px;
+  height: auto;
+  max-height: 64px;
+}
+
+dialog.modal .modal-header img {
+  height: 64px;
+  margin-bottom: var(--spacing-30);
+}
+
+dialog.modal .modal-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: calc((var(--spacing-40) * 2) + 18px);
+  min-height: calc((var(--spacing-40) * 2) + 18px);
+  border-radius: 0 16px 0 0;
+}
+
+dialog.modal .modal-close::before,
+dialog.modal .modal-close::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: calc(var(--spacing-40) + 10px);
+  right: var(--spacing-horizontal);
+  width: 20px;
+  height: var(--border-20);
+  background-color: var(--text-color);
+}
+
+dialog.modal .modal-close::before {
+  transform: rotate(45deg);
+}
+
+dialog.modal .modal-close::after {
+  transform: rotate(-45deg);
+}
+
+dialog.modal .modal-body {
+  flex: 0 1 auto;
+  overflow-y: auto;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+dialog.modal .modal-footer .button {
+  flex: 1 1 calc(50% - var(--spacing-horizontal));
+  min-width: min-content;
+}
+
+@media (min-width: 700px) {
+  dialog.modal .modal-footer .button {
+    flex: unset;
+  }
+}
+
+dialog.modal .modal-header .default-content-wrapper > *,
+dialog.modal .modal-footer .default-content-wrapper > * {
+  margin: 0;
+}
+
+dialog.modal[open] .modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #0009;
+  z-index: -1;
+}
+
+@media (orientation: landscape) and (max-height: 600px) {
+  dialog.modal[open] .modal-wrapper {
+    overflow-y: auto;
+    border-radius: var(--border-radius);
+  }
+
+  dialog.modal[open] .modal-body {
+    flex: 1 0 100%;
+  }
+}
+
+/* sections */
+main .section > [class*=-wrapper] {
+  margin: var(--spacing-horizontal) var(--gutter-horizontal);
+}
+
+main .section .heading-only,
+main .section .has-footnote {
+  margin-bottom: 0;
+}
+
+main .section.light-icons span.icon {
+  color: var(--nurtec-purple-light);
+}
+
+main .section + .section {
+  margin-top: 0;
+}
+
+main .section.card + .section.card {
+  margin-top: var(--spacing-horizontal);
+}
+
+/* stylelint-disable no-descending-specificity */
+main .section.heading-only + .section,
+main .section.bg:not(.card) + .section.bg:not(.card),
+main .section.hero-container + .section.bg:not(.card),
+main .section.bg:not(.card) + .section.isi-container,
+main .section .heading-only + [class*=-wrapper],
+main .section [class*=-wrapper] + .footnote-only {
+  margin-top: 0;
+}
+
+.migraine-triggers-page .section {
+  padding-bottom: 20px;
+}
+
+.migraine-triggers-page .section.menstruation {
+  padding-top: 20px;
+}
+
+@media (min-width: 1400px) {
+  .section > div {
+    margin: auto;
+  }
+}
+
+/* section metadata */
+main .section.card {
+  margin-left: var(--spacing-horizontal);
+  margin-right: var(--spacing-horizontal);
+  border-radius: var(--border-radius);
+  padding-top: var(--spacing-horizontal);
+  padding-bottom: var(--spacing-horizontal);
+  background-color: var(--light-color);
+}
+
+main .section.card > [class*=-wrapper] {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+main .section.card.outline {  
+  border: var(--border-20) solid var(--gray-10);
+  background-color: var(--background-color);
+}
+
+main .section.bg {
+  overflow: auto;
+}
+
+main .section.bg.card > [class*=-wrapper] {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+main .section.neutral {
+  background-color: var(--gray-05);
+}
+
+main .section.neutral .button:hover,
+main .section.neutral .button.primary:hover {
+  --button-background-color: var(--gray-05);
+}
+
+main .section.light {
+  background-color: var(--light-color);
+}
+
+main .section.light .button.primary:hover {
+  --button-background-color: var(--light-color);
+}
+
+main .section.accent {
+  background-color: var(--accent-color);
+}
+
+main .section.accent-light,
+main div#migraine-causes.section.accent {
+  background-color: var(--accent-light-color);
+}
+
+main .section.neutral .button,
+main .section.accent .button {
+  --button-border-color: transparent;
+  --button-background-color: var(--emphasis-color);
+  --button-text-color: white;
+}
+
+main .section.neutral .button:hover,
+main .section.neutral .button.primary:hover,
+main .section.accent .button:hover,
+main .section.accent .button.primary:hover {
+  --button-text-color: var(--button-border-color);
+}
+
+main .section.accent .button:hover,
+main .section.accent .button.primary:hover {
+  --button-background-color: var(--accent-color);
+}
+
+main .section.neutral .button:hover,
+main .section.accent .button:hover {
+  --button-border-color: var(--emphasis-color);
+}
+
+main .section.neutral .button.primary,
+main .section.accent .button.primary {
+  --button-background-color: var(--dark-color);
+}
+
+main .section.neutral .button.primary:hover,
+main .section.accent .button.primary:hover {
+  --button-border-color: var(--dark-color);
+}
+
+main .section.neutral .button.secondary,
+main .section.accent .button.secondary {
+  --button-background-color: transparent;
+  --button-text-color: var(--link-color);
+}
+
+main .section.neutral .button.secondary:hover,
+main .section.accent .button.secondary:hover {
+  --button-text-color: var(--text-color);
+}
+
+main .section.neutral h1 u::before, main .section.neutral h2 u::before, main .section.neutral h3 u::before,
+main .section.neutral h4 u::before, main .section.neutral h5 u::before, main .section.neutral h6 u::before,
+main .section.light h1 u::before, main .section.light h2 u::before, main .section.light h3 u::before,
+main .section.light h4 u::before, main .section.light h5 u::before, main .section.light h6 u::before,
+main .section.accent h1 u::before, main .section.accent h2 u::before, main .section.accent h3 u::before,
+main .section.accent h4 u::before, main .section.accent h5 u::before, main .section.accent h6 u::before {
+  border-left-color: var(--nurtec-purple);
+  border-right-color: var(--nurtec-teal);
+}
+
+main .section.emphasis,
+main .section.dark {
+  --button-text-color: white;
+  --button-border-color: white;
+  --heading-color: white;
+  --heading-emphasis-color: var(--nurtec-teal-light);
+  --footnote-color: white;
+
+  color: white;
+}
+
+main .section.emphasis {
+  --heading-emphasis-color: var(--nurtec-teal-lighter);
+
+  background-color: var(--emphasis-color);
+}
+
+main .section.dark {
+  background-color: var(--dark-color);
+}
+
+main .section.emphasis .default-content-wrapper h3,
+main .section.emphasis .default-content-wrapper a:any-link:not(.button),
+main .section.dark .default-content-wrapper h3,
+main .section.dark .default-content-wrapper a:any-link:not(.button) {
+  color: inherit;
+}
+
+main .section.emphasis .button:hover,
+main .section.dark .button:hover {
+  --button-background-color: white;
+  --button-text-color: var(--button-border-color);
+}
+
+main .section.emphasis .button:hover {
+  --button-border-color: var(--emphasis-color);
+}
+
+main .section.dark .button:hover {
+  --button-border-color: var(--dark-color);
+}
+
+main .section.emphasis .button.primary,
+main .section.dark .button.primary {
+  --button-border-color: transparent;
+  --button-background-color: white;
+}
+
+main .section.emphasis .button.primary {
+  --button-text-color: var(--emphasis-color);
+}
+
+main .section.dark .button.primary {
+  --button-text-color: var(--dark-color);
+}
+
+main .section.emphasis .button.primary:hover,
+main .section.dark .button.primary:hover {
+  --button-border-color: white;
+  --button-text-color: var(--button-border-color);
+}
+
+main .section.emphasis .button.primary:hover {
+  --button-background-color: var(--emphasis-color);
+}
+
+main .section.dark .button.primary:hover {
+  --button-background-color: var(--dark-color);
+}
+
+main .section.emphasis .button.secondary:hover,
+main .section.dark .button.secondary:hover {
+  --button-background-color: transparent;
+  --button-text-color: white;
+}
+
+main .section.emphasis h1 u::before, main .section.emphasis h2 u::before, main .section.emphasis h3 u::before,
+main .section.emphasis h4 u::before, main .section.emphasis h5 u::before, main .section.emphasis h6 u::before {
+  border-left-color: white;
+  border-right-color: var(--nurtec-teal-light);
+}
+
+main .section.dark h1 u::before, main .section.dark h2 u::before, main .section.dark h3 u::before,
+main .section.dark h4 u::before, main .section.dark h5 u::before, main .section.dark h6 u::before {
+  border-left-color: var(--nurtec-teal);
+  border-right-color: var(--nurtec-purple-light);
+}
+
+.vjs-paused, .vjs-playing {
+  outline: none;
+}
+
+/* nurtec specific styles */
+main .section.important + .section.important {
+  border-top: 2px solid var(--primary-color);
+}
+
+.purple-text p {
+  color: var(--button-text-color);
+}
+
+#nurtec-odt-can-be-taken-whenever-wherever-you-are-so-patients-can-treat-and-prevent-migraine-attacks-even-while-traveling + p.footnote {
+  margin-bottom: 0;
+}
+
+
+div#how-to-get-prescription,
+div#savings-insurance {
+  background: var(--nurtec-teal-light);
+  padding: 20px 5px;
+  margin: 64px 24px 0;
+  border-radius: 20px;
+}
+
+div#how-to-get-prescription {
+  padding: 20px 15px;
+}
+
+.savings-pharmacy,
+div#support-program {
+  padding: 34px 0;
+}
+
+div#how-to-get-prescription .default-content-wrapper {
+  margin: var(--spacing-horizontal) 0;
+}
+
+div#how-to-get-prescription .default-content-wrapper p,
+div#how-to-get-prescription .default-content-wrapper ol li {
+  font-size: 20px;
+}
+
+div#how-to-get-prescription.numbered .default-content-wrapper ol li::before {
+  font-size: 18px;
+  top: 0;
+}
+
+div#how-to-get-prescription .default-content-wrapper p.button-container {
+  font-size: var(--body-font-size-ss);
+}
+
+div#how-to-get-prescription .default-content-wrapper .footnote {
+  font-size: var(--body-font-size-s);
+}
+
+.migraine-triggers-page .hero.testimonial .hero-banner-callout {
+  right: unset;
+  left: 0;
+  margin-left: 0;
+  margin-right: var(--gutter-horizontal);
+  border-radius: 0 var(--border-radius) 0 0;
+}
+
+div#onesource {
+  margin: 60px 0;
+}
+
+div#migraine-causes {
+  padding: 48px 0;
+}
+
+@media (min-width: 700px) {
+  
+  div#migraine-causes {
+    padding: 64px 0;
+  }
+
+  main .section.patient-stories-container {
+    margin-top: var(--spacing-70);
+  }
+  
+  main .section.patient-stories-container .default-content-wrapper.heading-only {
+    margin-bottom: var(--spacing-70);
+  }
+
+  .savings-pharmacy .cards.split .cards-card-cta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  div#savings-insurance {
+    padding: 40px 24px;
+    margin: 64px 56px 56px;
+  }
+
+  .savings-hero > div:last-child > div {
+    padding: 0;
+  }
+
+  .social-media-container h2 {
+    font-size: 36px;
+  }
+
+  .migraine-triggers-page .hero.testimonial .hero-banner-callout {
+    left: unset;
+    right: 0;
+    margin-left: var(--gutter-horizontal);
+    margin-right: 0;
+    border-radius: var(--border-radius) 0 0;
+  }
+
+  div#how-to-get-prescription {
+    margin: 64px 64px 0;
+    padding: 20px 64px;
+  }
+
+  div#how-to-get-prescription .default-content-wrapper p,
+  div#how-to-get-prescription .default-content-wrapper ol li {
+    font-size: 24px;
+  }
+
+  div#how-to-get-prescription .default-content-wrapper ol li {
+    padding-left: 12px;
+  }
+
+  div#how-to-get-prescription.numbered .default-content-wrapper ol li::before {
+    font-size: var(--footnote-font-size-m);
+  }
+
+  div#how-to-get-prescription .default-content-wrapper .footnote {
+    font-size: var(--footnote-font-size-m);
+    line-height: 16.8px;
+  }
+
+  div#how-to-get-prescription .default-content-wrapper p.button-container {
+    font-size: var(--body-font-size-m);
+  }
+
+  div#how-to-get-prescription .default-content-wrapper p.button-container a:hover {
+    --button-background-color: transparent;
+  }
+
+  div#onesource-card {
+    padding: 56px 4px;
+  }
+
+  .savings-pharmacy,
+  div#support-program {
+    padding: 64px 0;
+  }
+}
+
+div#preventive h2 {
+  word-break: keep-all;
+}
+
+.numbered ol {
+  list-style: none;
+  counter-reset: numbered;
+  padding-inline-start: 40px;
+  margin-bottom: 40px;
+}
+
+.numbered ol li {
+  counter-increment: numbered;
+  position: relative;
+  padding-left: 7px;
+  margin-bottom: var(--spacing-40);
+}
+
+.numbered ol li::before {
+  content: counter(numbered);
+  position: absolute;
+  top: -.6ch;
+  left: -40px;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: var(--dark-color);
+  color: white;
+  font-weight: bold;
+  line-height: 2.1rem;
+  text-align: center;
+}
+
+h3#how-does-it-work {
+  color: var(--heading-color);
+  margin-top: var(--spacing-40);
+}
+
+.section.women-footnote {
+  margin: 30px 0 50px 0;
+}
+
+.section.women-footnote .default-content-wrapper {
+  background: var(--nurtec-teal-lighter);
+  border-radius: 20px;
+  padding: 32px;
+  display: flex;
+  gap: 24px;
+  align-items: start;
+  flex-direction: column;
+}
+
+.section.women-footnote .default-content-wrapper p {
+  margin: 0;
+}
+
+.section.women-footnote .default-content-wrapper span.icon {
+  width: 48px;
+  height: 48px;
+}
+
+@media (min-width: 900px) {
+  .section.women-footnote .default-content-wrapper {
+    flex-direction: row;
+    align-items: center;
+    padding: 32px 48px;
+  }
+}
+
+@media (min-width: 1100px) {
+  .numbered ol li::before {
+    top: -.2ch;
+  }
+
+  h2#how-does-it-work {
+    font-size: var(--heading-font-size-l);
+    margin-top: var(--spacing-55);
+  }
+
+  .section.women-footnote {
+    margin: 60px 0 90px 0;
+  }
+}
+
+div#terms-and-conditions .default-content-wrapper {
+  margin-bottom: var(--spacing-90);
+}
+
+div#terms-and-conditions .default-content-wrapper>ul,
+div#terms-and-conditions .default-content-wrapper>p {
+  margin-bottom: var(--spacing-55);
+}
+
+div#onesource-card {
+  background: var(--gray-05);
+  padding: 30px 0;
+}
+
+.kenya-image div div:last-child p:last-child {
+  margin-top: 10px;
+}

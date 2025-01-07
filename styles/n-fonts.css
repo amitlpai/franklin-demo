@@ -1,0 +1,31 @@
+@font-face {
+  font-family: 'Pfizer Diatype';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/pfizer-diatype-bold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Pfizer Diatype';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/pfizer-diatype-regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Pfizer Tomorrow';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../fonts/pfizer-tomorrow-bold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Pfizer Tomorrow';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/pfizer-tomorrow-regular.woff2') format('woff2');
+}
